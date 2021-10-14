@@ -67,6 +67,7 @@ const Register = props => {
       })
       .catch((err) => {
         console.log(err);
+        console.log(err.response);
         setErrs(err.response.data.errors);
       });
   };
