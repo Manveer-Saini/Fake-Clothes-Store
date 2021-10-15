@@ -1,38 +1,68 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  margin: 0px;
+  padding: 0px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.flex{
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
+  .flex_column1, .flex_column2{
+      position: relative;
+      width: 50%;
+      height: 100vh;
+      background-color: rgb(69, 98, 124);
+      @media screen and (max-width: 800px) {
+        width: 100%;
+        height: 50vh;
+      }
+    }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+      .flex_column1_video{
+        position: relative;
+        height: 100vh;
+        width: 100vh;
+        object-fit: cover;
+        -webkit-object-fit:cover;
+        @media screen and (max-width: 800px) {
+          height: 50vh;
+        }
+      }
+      .flex_column1_content{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-image: linear-gradient(to right, rgba(0,0,0,0.171), rgba(0,0,0,0.171));
+        box-shadow: 0 5rem 4rem rgba(0, 0, 0, 0.65);
+        background-color: rgba(0,0,0,0.322);
+      }
+      .flex_column1_content-text{
+        padding: 20px;
+        font-size:xx-large;
+        color: rgb(255, 255, 255);
+        font-weight: bolder;
+      }
+      .flex_column2_content{
+        position: absolute;
+        width: 600px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-image: linear-gradient(to right, rgba(0,0,0,0.171), rgba(0,0,0,0.171));
+        box-shadow: 0 5rem 4rem rgba(0, 0, 0, 0.65);
+        background-color: rgba(0,0,0,0.322);
+      }
+      .flex_column2_content-text{
+        padding: 20px;
+        color: rgb(255, 255, 255);
+        font-weight: bolder;
+      }
+.link_from_front_page{
+  text-decoration: none;
+  color: aliceblue;
+  font-size:xx-large;
 }
