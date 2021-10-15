@@ -57,4 +57,20 @@ module.exports = {
                 res.status(400).json(err);
             });
     },
+
+    myCart: (req, res) =>{
+        console.log("Here is your cart.")
+        Item.find({})
+        .then((allItems) => res.json(allItems))
+        .catch((err) =>{
+            console.log("Cannot find your cart.")
+            res.status(400).json(err)
+        })
+    },
+
+    reviewOrder: (req, res) => {
+        console.log("Review your order.")
+        // We are not passing any data here, so do we need to have anything further
+        // in this controller?
+    }
 }

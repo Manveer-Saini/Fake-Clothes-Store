@@ -10,7 +10,7 @@ import { Link } from "@reach/router";
 
 
 
-const Register = props => {
+const Register = (props) => {
   const [confirmReg, setConfirmReg] = useState("");
   const [errs, setErrs] = useState({});
 

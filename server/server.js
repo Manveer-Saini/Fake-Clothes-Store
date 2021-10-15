@@ -20,5 +20,7 @@ require("./routes/item.routes")(app);
 require("./routes/shoppingCart.routes")(app);
 require("./routes/user.routes")(app);
 
-app.listen(process.env.MY_PORT, () => 
+app.listen(8000, () => 
 console.log(`You have successfully connected to port ${process.env.MY_PORT}`));
+
+// process.env.MY_PORT
