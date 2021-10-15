@@ -56,8 +56,8 @@ const Login = () => {
             <div className="flex_column2" style={{backgroundImage: "url(/images/front-page.jpg)", backgroundSize: "cover", backgroundPosition: "center center"}}>
                 <div className="flex_column2_content">
             <div className="flex_column2_content-text">
-              <h1 className="text-center mb-3">Register For</h1>
-              <h1 className="text-center">Boutique</h1>
+                <h1 className="text-center mb-3">Welcome Back To</h1>
+                <h1 className="text-center">Boutique</h1>
             <p className="error-text" style={{color:"red"}}>{errorMessage ? errorMessage : ""}</p>
 
             <Container>
