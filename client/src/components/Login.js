@@ -41,13 +41,23 @@ const Login = () => {
 
     return (
         <div>
-            <Nav className="justify-content-end" >
-                <Nav.Item>
-                    <Nav.Link ><Link to="/Register">Don't Have an Account? Register</Link></Nav.Link>
-                </Nav.Item>
-            </Nav>
-
-            <h2>Welcome Back!</h2>
+            <div className="flex">
+            <div className="flex_column1">
+            <video className="flex_column1_video" muted loop="true" autoPlay="true" >
+                <source src="./Videos/video1.mp4" type="video/mp4"/>
+            </video>
+            <div className="flex_column1_content">
+                <div className="flex_column1_content-text">
+                    <h1>Welcome To</h1>
+                    <h1 className="text-center">Boutique</h1>
+                </div>  
+            </div>
+            </div>
+            <div className="flex_column2" style={{backgroundImage: "url(/images/front-page.jpg)", backgroundSize: "cover", backgroundPosition: "center center"}}>
+                <div className="flex_column2_content">
+            <div className="flex_column2_content-text">
+              <h1 className="text-center mb-3">Register For</h1>
+              <h1 className="text-center">Boutique</h1>
             <p className="error-text" style={{color:"red"}}>{errorMessage ? errorMessage : ""}</p>
 
             <Container>
@@ -81,8 +91,11 @@ const Login = () => {
                     </Col>
                 </Row>
             </Container>
-        
         </div>
+        </div>
+        </div>
+        </div>
+    </div>
     );
 };
 
