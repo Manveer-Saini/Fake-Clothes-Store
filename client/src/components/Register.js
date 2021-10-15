@@ -67,28 +67,31 @@ const Register = (props) => {
       })
       .catch((err) => {
         console.log(err);
+        console.log(err.response);
         setErrs(err.response.data.errors);
       });
   };
 
   return (
-    <div className="page">
-      {/* <Nav className="justify-content-start" >
-        <Nav.Item>
-          <Nav.Link >Computerville</Nav.Link>
-        </Nav.Item>
-      </Nav> */}
-      <p className="text-xl-left">Computerville</p>
-
-      <Nav className="justify-content-end" >
-        <Nav.Item>
-          <Nav.Link ><Link to="/Login">Already Have an Account? Login</Link></Nav.Link>
-        </Nav.Item>
-      </Nav>
-      <div className="form">
-        {/* Container that centers the registration form. */}
-      <Container>
-      <Row>
+    <div>
+    <div className="flex">
+    <div className="flex_column1">
+    <video className="flex_column1_video" muted loop="true" autoPlay="true" >
+        <source src="./Videos/video1.mp4" type="video/mp4"/>
+    </video>
+    <div className="flex_column1_content">
+        <div className="flex_column1_content-text">
+            <h1>Welcome To</h1>
+            <h1 className="text-center">Boutique</h1>
+        </div>  
+    </div>
+    </div>
+    <div className="flex_column2" style={{backgroundImage: "url(/images/front-page.jpg)", backgroundSize: "cover", backgroundPosition: "center center"}}>
+        <div className="flex_column2_content">
+            <div className="flex_column2_content-text">
+              <h1 className="text-center mb-3">Register For</h1>
+              <h1 className="text-center">Boutique</h1>
+            <Row>
         <Col>
           
           {
@@ -181,7 +184,6 @@ const Register = (props) => {
                         : null
                     }
                 </Form.Group>
-
                 <Form.Group as={Col}>
                       <Form.Label htmlFor="state">State</Form.Label>
                           <Form.Select onChange={(e) => handleChange(e)} name="state" value={user.state}>
@@ -283,14 +285,16 @@ const Register = (props) => {
               <Button variant="primary" size="lg" type="submit">
                 Submit
               </Button>
+              <Link to="/Login">Already Have an Account? Login</Link>
             </div>
           </Form>
         </Col>
       </Row>
-    </Container>
-
-      </div>
+            </div>
+        </div>
     </div>
+</div>
+</div>
   );
 };
 

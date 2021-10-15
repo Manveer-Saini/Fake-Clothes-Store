@@ -9,6 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/esm/Row';
 import Col from 'react-bootstrap/esm/Col';
+import Home from './views/Home';
 
 
 function App() {
@@ -19,8 +20,7 @@ function App() {
           <LogReg path="/" />
           <Login path="/Login" />
           <Register path="/Register"/>
-          <MyCart path="/MyCart" />
-          <ReviewOrder path = "/ReviewOrder" />
+          <Home path="/home"/>
         </Router>      
 
       
