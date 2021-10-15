@@ -3,6 +3,7 @@ import {Link} from '@reach/router';
 import axios from 'axios';
 import cart from '../images/cart.jpeg';
 import fake from '../images/fake.png';
+import NavBar from '../components/NavBar.js';
 // import DeleteItem from "./DeleteItem"; Need to create this still.
 
 const MyCart = (props) =>{
@@ -20,17 +21,11 @@ const MyCart = (props) =>{
     // Put a Delete item filter in here? - Austin
 
     return(
-        <div>
-            <div style={{ display:'flex', justifyContent:'space-around'}}> 
-            <img src={fake} alt="fake"></img>       
-            <Link to="/home">Mens</Link> |
-            <Link to="/">Women</Link> |
-            <Link to="/">User Profile</Link>
-            <Link to="/"><img src ={cart} alt="cart"></img></Link>
-            </div>
+        <div style={{textAlign:"center"}}>
+            <NavBar />
             <div className="myCart">
-                <h2>Your Cart:</h2>
-                <table>
+                <h2 style={{marginTop:"100px", fontSize: "50px", fontStyle:"oblique"}}><u>Your Cart: (Total Item Cost Here) (Item Count Here)</u></h2>
+                <table style={{border:"1px solid black"}}>
                 {
                     cartList?
                         cartList.map((item, index)=>(
@@ -58,8 +53,8 @@ const MyCart = (props) =>{
                     :null
                 }
                 </table>
-                <button><Link to={'/Home'}><span>Add More Items!</span></Link></button>
-                <button><Link to={'/ReviewOrder'}><span>Checkout</span></Link></button>
+                <button type="button" className="btn btn-outline-primary"><Link to={'/home'}><span>Add More Items!</span></Link></button>
+                <button type="button" className="btn btn-outline-warning"><Link to={'/revieworder'}><span>Checkout</span></Link></button>
             </div>
         </div>
         

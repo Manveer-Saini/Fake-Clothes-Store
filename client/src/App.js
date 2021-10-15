@@ -21,6 +21,8 @@ function App() {
           <Login path="/Login" />
           <Register path="/Register"/>
           <Home path="/home"/>
+          <MyCart path="/mycart" />
+          <ReviewOrder path= "/revieworder" />
         </Router>      
 
       

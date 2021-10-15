@@ -9,10 +9,10 @@ const NavBar = () =>{
     return (
         <div style={{ display:'flex', justifyContent:'space-around'}}> 
             <img src={fake} alt="fake"></img>       
-            <Link to="/home">Mens</Link> |
+            <Link to="/">Mens</Link> |
             <Link to="/">Women</Link> |
             <Link to="/">User Profile</Link>
-            <Link to="/"><img src ={cart} alt="cart"></img></Link>
+            <Link to="/mycart"><img src ={cart} alt="cart"></img></Link>
         </div>
 
     )
